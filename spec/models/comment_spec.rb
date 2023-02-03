@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe Comment, type: :model do
   describe '#update_comments_counter' do
-    it 'should update comments_counter on user' do
+    it 'should update comments_counter on post' do
       user = User.create(name: 'Test User', posts_counter: 0)
       post = user.posts.build(title: 'Test Post', comments_counter: 0, likes_counter: 0)
       post.author_id = user.id
