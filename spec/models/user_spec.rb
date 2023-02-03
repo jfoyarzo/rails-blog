@@ -19,12 +19,8 @@ RSpec.describe User, type: :model do
   end
 
   describe '#recent_posts' do
-    let(:post1) { Post.create(title: 'Title1', text: 'text1', author_id: subject.id) }
-    let(:post2) { Post.create(title: 'Title2', text: 'text2', author_id: subject.id) }
-    let(:post3) { Post.create(title: 'Title3', text: 'text3', author_id: subject.id) }
-    let(:post4) { Post.create(title: 'Title4', text: 'text4', author_id: subject.id) }
-
     it 'should return only the last 3 posts' do
+      4.times { Post.create(title: 'Title1', text: 'text1', author_id: subject.id) }
       expect(User.recent_posts(subject.id)).to eq(subject.posts.last(3))
     end
   end
