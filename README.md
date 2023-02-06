@@ -2,23 +2,24 @@
 
 # 📗 Table of Contents
 
-- [📖 About the Project](#about-project)
-  - [🛠 Built With](#built-with)
-    - [Tech Stack](#tech-stack)
-    - [Key Features](#key-features)
-- [💻 Getting Started](#getting-started)
-  - [Setup](#setup)
-  - [Prerequisites](#prerequisites)
-  - [Install](#install)
-  - [Usage](#usage)
-  - [Run tests](#run-tests)
-  - [Deployment](#triangular_flag_on_post-deployment)
-- [👥 Authors](#authors)
-- [🔭 Future Features](#future-features)
-- [🤝 Contributing](#contributing)
-- [⭐️ Show your support](#support)
-- [🙏 Acknowledgements](#acknowledgements)
-- [📝 License](#license)
+- [📗 Table of Contents](#-table-of-contents)
+- [📖 Rails Blog ](#-rails-blog-)
+  - [🛠 Built With ](#-built-with-)
+    - [Tech Stack ](#tech-stack-)
+    - [Key Features ](#key-features-)
+  - [💻 Getting Started ](#-getting-started-)
+    - [Prerequisites](#prerequisites)
+    - [Setup](#setup)
+    - [Install](#install)
+    - [Usage](#usage)
+    - [Run tests](#run-tests)
+    - [Deployment](#deployment)
+  - [👥 Authors ](#-authors-)
+  - [🔭 Future Features ](#-future-features-)
+  - [🤝 Contributing ](#-contributing-)
+  - [⭐️ Show your support ](#️-show-your-support-)
+  - [🙏 Acknowledgments ](#-acknowledgments-)
+  - [📝 License ](#-license-)
 
 
 # 📖 Rails Blog <a name="about-project"></a>
@@ -77,12 +78,11 @@ Clone this repository to your desired folder:
 
 ### Install
 
-Install this project with:
+Install dependencies for this project using:
 
-  `bundle install`<br>
-  and<br>
-  `npm install`
+  `bundle install`
 
+>For local PostgreSQL database integration, remember to provide the correct credentials using `rails credentials:edit`
 
 ### Usage
 
@@ -94,7 +94,7 @@ To start the server, execute the following command:
 
 To run tests, run the following command:
 
-`rake test TEST=test/**/*.rb`
+`rspec`
 
 
 ### Deployment
