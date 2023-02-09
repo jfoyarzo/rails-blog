@@ -3,3 +3,4 @@
 <p><%= @user.bio %></p>
 </div>
 <%= render partial: 'shared/post', collection: @posts %>
+<%= button_to "View all posts", user_posts_path(@user), class: "btn", method: 'get' %>
