@@ -1,1 +1,12 @@
-<h3>This will display a specific post by id</h3>
+<div class="full-post">
+  <div class="post-detail">
+    <h2><%= @post.title %> by <%= @user.name %></h2>
+    <p><%= @post.text %></p>
+  </div>
+  <div class="all-comments">
+    <% @comments.each do |comment| %>
+    <% user = User.find(comment.author_id) %>
+      <p><%= user.name %> : <%= comment.text %></p>
+    <% end  %>
+  </div>
+</div>
