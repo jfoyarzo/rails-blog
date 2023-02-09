@@ -1,1 +1,5 @@
-<h3>This will display a specific user by id</h3>
+<%= render partial: 'shared/user', locals: { user: @user } %>
+<div class="user-bio">
+<p><%= @user.bio %></p>
+</div>
+<%= render partial: 'shared/post', collection: @posts %>
