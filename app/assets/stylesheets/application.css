@@ -94,6 +94,10 @@
   align-self: center;
 }
 
+.posts-wrapper form {
+  align-self: center;
+}
+
 .user-wrapper button {
   margin-top: 1em;
   width: 12em;
