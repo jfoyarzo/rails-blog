@@ -1,0 +1,9 @@
+<div class="user-header">
+  <div class="user-photo">
+    <img src=<%= user.photo %> alt="user photo">
+  </div>
+  <div class="user-info">
+  <h2><%= link_to_unless current_page?(user_path(user)), user.name, user_path(user) %></h2>
+  <p>Number of posts: <%= user.posts.count %></p>
+  </div>
+</div>
