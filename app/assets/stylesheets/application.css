@@ -13,3 +13,28 @@
  *= require_tree .
  *= require_self
  */
+
+ .users-wrapper {
+   padding: 3em 1.5em 0;
+ }
+
+ .user-header {
+    border: 1px solid black;
+    padding: 2rem;
+    display: flex;
+    margin-bottom: 1em;
+ }
+
+ .user-photo {
+   width: 13rem;
+ }
+
+ .user-info {
+   width: 100%;
+   display: flex;
+ }
+
+ .user-info p {
+   margin-left: auto;
+   margin-top: auto;
+ }
