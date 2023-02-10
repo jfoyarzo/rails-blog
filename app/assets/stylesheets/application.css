@@ -58,6 +58,22 @@
    margin-left: auto;
  }
 
+ .user-bio {
+   border: 1px solid black;
+   min-height: 3em;
+   padding: 1.5em;
+   margin-bottom: 2em;
+ }
+
+ .user-wrapper {
+   display: flex;
+   flex-direction: column;
+ }
+
+ .user-wrapper form {
+   align-self: center;
+ }
+
  .user-info p {
    margin-left: auto;
    margin-top: auto;
