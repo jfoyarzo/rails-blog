@@ -1,11 +1,13 @@
-<%= render partial: 'shared/user', locals: { user: @user } %>
-<% @posts.each do |post| %>
-<%= render partial: 'shared/post', locals: { post: post}  %>
-<div class="comments">
-    <% Post.recent_comments(post.id).each do |comment| %> 
-    <% user = User.find(comment.author_id)  %>
+<div class="posts-wrapper">
+  <%= render partial: 'shared/user', locals: { user: @user } %>
+  <% @posts.each do |post| %>
+    <%= render partial: 'shared/post', locals: { post: post}  %>
+    <div class="comments">
+      <% Post.recent_comments(post.id).each do |comment| %>
+        <% user = User.find(comment.author_id)  %>
         <h3><%= user.name %> : <%= comment.text %></h3>
-     <% end %>  
-  </div>    
-<% end  %>
+      <% end %>
+    </div>
+  <% end  %>
 <button>Pagination</button>
+</div>
