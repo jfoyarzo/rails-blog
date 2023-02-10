@@ -75,8 +75,30 @@
   padding: 1em;
 }
 
+.post-detail {
+  border: 1px solid black;
+  padding: 1em;
+}
+
+.all-comments {
+  border: 1px solid black;
+  padding: 1em;
+}
+
+.post-header {
+  display: flex;
+  align-items: center;
+}
+
 .user-wrapper form {
   align-self: center;
+}
+
+.user-wrapper button {
+  margin-top: 1em;
+  width: 12em;
+  height: 3em;
+  font-size: initial;
 }
 
 .user-info p {
@@ -88,6 +110,9 @@
   margin-left: auto;
   margin-right: auto;
   margin-top: 1em;
+  width: 12em;
+  height: 3em;
+  font-size: initial;
 }
 
 .post-text p {
