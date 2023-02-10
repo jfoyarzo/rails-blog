@@ -20,7 +20,7 @@
 
  .user-header {
     border: 1px solid black;
-    padding: 2rem;
+    padding: 1.5rem;
     display: flex;
     margin-bottom: 1em;
  }
@@ -34,7 +34,43 @@
    display: flex;
  }
 
+ .posts-wrapper {
+   padding: 1.5rem;
+   display: flex;
+   flex-direction: column;
+ }
+
+ .post-wrapper {
+   border: 1px solid black;
+   padding: 1em;
+   height: 11em;
+   margin-bottom: 1em;   
+ }
+
+ .post-text {   
+   height: 8em;
+ }
+
+ .counters {
+   display: flex;
+   width: 10em;
+   justify-content: space-between;
+   margin-left: auto;
+ }
+
  .user-info p {
    margin-left: auto;
    margin-top: auto;
+ }
+
+ .posts-wrapper button {
+   margin-left: auto;
+   margin-right: auto;
+ }
+
+ .post-text p {
+   display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
  }
