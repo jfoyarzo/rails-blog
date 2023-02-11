@@ -9,8 +9,9 @@ class PostsController < ApplicationController
     @comments = @post.comments
     @user = User.find(params[:user_id])
     @comment = Comment.new
+    @like = Like.new
     respond_to do |format|
-      format.html { render :show, locals: { comment: @comment } }
+      format.html { render :show, locals: { comment: @comment, like: @like } }
     end
   end
 
