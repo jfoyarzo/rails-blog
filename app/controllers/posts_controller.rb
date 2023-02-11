@@ -8,6 +8,10 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
     @comments = @post.comments
     @user = User.find(params[:user_id])
+    @comment = Comment.new
+    respond_to do |format|
+      format.html { render :show, locals: { comment: @comment } }
+    end
   end
 
   def new
@@ -19,7 +23,7 @@ class PostsController < ApplicationController
 
   def create
     user = current_user
-    post = Post.new(params.require(:post).permit(:title, :text, author_id: user.id))
+    post = Post.new(params.require(:post).permit(:title, :text))
     post.author_id = user.id
     respond_to do |format|
       format.html do
