@@ -1,4 +1,7 @@
 <div class="new-post">
+<% if flash[:error] %>
+            <p class="error"><%= flash[:error] %></p>
+        <% end %>
   <%= form_with model: post, url: create_post_path, method: post, scope: post do |form| %>
     <div>
       <%= form.label :title %>
