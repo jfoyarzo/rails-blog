@@ -8,11 +8,19 @@
     </div>  
   </div>
     <p><%= @post.text %></p>
+    <%= render 'shared/like_button' %>
   </div>
   <div class="all-comments">
     <% @comments.each do |comment| %>
     <% user = User.find(comment.author_id) %>
       <p><strong><%= user.name %>:</strong> <%= comment.text %></p>
     <% end  %>
+    <%= render 'shared/comment_form' %>
+    <% if flash[:notice] %>
+            <p class="notice"><%= flash[:notice] %></p>
+        <% end %>
+    <% if flash[:error] %>
+            <p class="error"><%= flash[:error] %></p>
+        <% end %>
   </div>
 </div>

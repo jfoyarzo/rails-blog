@@ -90,6 +90,59 @@
   align-items: center;
 }
 
+.btn {
+  margin-top: 1em;
+  width: 12em;
+  height: 3em;
+  font-size: initial;
+}
+
+.users-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.new-post {
+  border: 1px solid black;
+  padding: 1em;
+  margin: 1em;
+  width: 50%;
+}
+
+.notice {
+  color: green;
+  font-style: italic;
+}
+
+.error {
+  color: red;
+  font-style: italic;
+}
+
+.form-group {
+  display: flex;
+  margin-bottom: 1em;
+  font-size: large;
+}
+
+.form-group label {
+  margin-right: 0.5em;
+}
+
+.form-group textarea {
+  width: 30em;
+  height: 10em;
+}
+
+.form-group input {
+  width: 20em;
+  height: 1.5em;
+}
+
+.post-detail form {
+  display: flex;
+}
+
 .user-wrapper form {
   align-self: center;
 }
@@ -98,25 +151,9 @@
   align-self: center;
 }
 
-.user-wrapper button {
-  margin-top: 1em;
-  width: 12em;
-  height: 3em;
-  font-size: initial;
-}
-
 .user-info p {
   margin-left: auto;
   margin-top: auto;
-}
-
-.posts-wrapper button {
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 1em;
-  width: 12em;
-  height: 3em;
-  font-size: initial;
 }
 
 .post-text p {
@@ -124,4 +161,8 @@
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
+}
+
+.post-detail form input {
+  margin-left: auto;
 }
