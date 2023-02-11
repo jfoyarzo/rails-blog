@@ -1,0 +1,5 @@
+<%= form_with model: @comment, url: create_comment_path, scope: :comment do |form| %>
+  <%= form.text_field :text, placeholder: 'Add your comment...' %>
+  <%= form.hidden_field :post_id, value: @post.id %>
+  <%= form.submit 'Send' %>
+<% end %>
