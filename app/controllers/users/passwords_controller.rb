@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class Users::PasswordsController < Devise::PasswordsController
   # GET /resource/password/new
   # def new
@@ -21,7 +19,7 @@ class Users::PasswordsController < Devise::PasswordsController
   #   super
   # end
 
-  # protected
+  protected
 
   # def after_resetting_password_path_for(resource)
   #   super(resource)
