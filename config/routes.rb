@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  devise_for :users, controllers: {
+    sessions: 'users/sessions',
+    registrations: 'users/registrations',
+    passwords: 'users/passwords'
+  }
   root 'users#index'
   get 'posts/new', to: 'posts#new', as: 'new_post'
   post 'posts/new', to: 'posts#create', as: 'create_post'
