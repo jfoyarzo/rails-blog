@@ -125,6 +125,34 @@
   font-size: large;
 }
 
+.login-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  border: 1px solid black;
+  padding: 1.5em;
+  align-items: center;
+  margin: auto;
+}
+
+.signup-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  border: 1px solid black;
+  padding: 1.5em;
+  align-items: center;
+  margin: auto;
+}
+
+.login-wrapper form {
+  padding: 1em;
+}
+
+.signup-wrapper form {
+  padding: 1em;
+}
+
 .form-group label {
   margin-right: 0.5em;
 }
@@ -165,4 +193,27 @@
 
 .post-detail form input {
   margin-left: auto;
+}
+
+.login-wrapper form .field {
+  margin-bottom: 0.5em;
+}
+
+.login-wrapper form .actions {
+  display: flex;
+  justify-content: center;
+}
+
+.signup-wrapper form .field {
+  margin-bottom: 0.5em;
+  padding: 0.3em;
+}
+
+.signup-wrapper form .actions {
+  display: flex;
+  justify-content: center;
+}
+
+.signup-wrapper form .field textarea {
+  width: 13em;
 }
