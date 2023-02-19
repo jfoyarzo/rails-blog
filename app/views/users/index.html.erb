@@ -1,7 +1,7 @@
 <div class="users-wrapper">
 <div class="users-header">
 <h1>Welcome to Rails Blog!</h1>
-<a href="/posts/new"><button type="button" class="btn">Create a new Post</button></a>
+<a href=<%= new_user_post_path(current_user.id) %>><button type="button" class="btn">Create a new Post</button></a>
 </div>
 <% if flash[:notice] %>
             <p class="notice"><%= flash[:notice] %></p>

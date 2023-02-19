@@ -23,9 +23,8 @@ class PostsController < ApplicationController
   end
 
   def create
-    user = current_user
     post = Post.new(params.require(:post).permit(:title, :text))
-    post.author_id = user.id
+    post.user = current_user
     respond_to do |format|
       format.html do
         if post.save
