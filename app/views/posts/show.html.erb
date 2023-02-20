@@ -1,22 +1,27 @@
 <div class="full-post">
   <div class="post-detail">
-  <div class="post-header">
-    <h2><%= @post.title %> by <%= link_to @user.name, user_path(@user) %></h2>
-    <div class="counters">
-    <p>Comments: <%= @post.comments_counter %></p>
-    <p>Likes: <%= @post.likes_counter %></p>
-    </div>  
-  </div>
+    <div class="post-header">
+      <h2><%= @post.title %> by <%= link_to @user.name, user_path(@user) %></h2>
+      <div class="counters">
+        <p>Comments: <%= @post.comments_counter %></p>
+        <p>Likes: <%= @post.likes_counter %></p>
+      </div>
+    </div>
     <p><%= @post.text %></p>
     <% if can? :destroy, @post  %>
-          <%= button_to "Delete Post", { action: "destroy", id: @post.id },
+      <%= button_to "Delete Post", { action: "destroy", id: @post.id },
                                 method: :delete, class: 'del-btn btn' %>
-        <% end  %>
+    <% end  %>
     <%= render 'shared/like_button' %>
   </div>
   <div class="all-comments">
     <% @comments.each do |comment| %>
-      <p><strong><%= comment.user.name %>:</strong> <%= comment.text %></p>
+      <div class="comment-wrapper">
+        <p><strong><%= comment.user.name %>:</strong> <%= comment.text %></p>
+        <% if can? :destroy, comment %>
+          <%= button_to('Delete Comment', user_post_comment_path(comment.author_id, comment.post_id, comment.id), method: 'delete', id: comment.id) %>
+        <% end %>
+      </div>
     <% end  %>
     <%= render 'shared/comment_form' %>
   </div>
