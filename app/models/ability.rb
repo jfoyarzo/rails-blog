@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class Ability
   include CanCan::Ability
 
@@ -8,8 +6,11 @@ class Ability
 
     can(:read, :all)
 
-    can(%i[create destroy], Post, author: user)
-    can([:destroy], Comment, author: user)
+    can :create, Post
+    can :create, Comment
+
+    can(%i[destroy], Post, user:)
+    can(%i[destroy], Comment, user:)
 
     return unless user.role == 'admin'
 
