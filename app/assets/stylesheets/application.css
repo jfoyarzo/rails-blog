@@ -145,6 +145,16 @@
   margin: auto;
 }
 
+.comment-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.comment-wrapper p {
+  margin: 0.5em 0;
+}
+
 .login-wrapper form {
   padding: 1em;
 }
@@ -191,7 +201,8 @@
   overflow: hidden;
 }
 
-.post-detail form input {
+.post-detail form input,
+.post-detail form button {
   margin-left: auto;
 }
 
