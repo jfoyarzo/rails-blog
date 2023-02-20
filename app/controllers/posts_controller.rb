@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  authorize_resource
   def index
     @user = User.find(params[:user_id])
     @posts = @user.posts
@@ -33,6 +34,21 @@ class PostsController < ApplicationController
         else
           flash.now[:error] = 'Error: Post could not be saved'
           render :new, locals: { post: }, status: 422
+        end
+      end
+    end
+  end
+
+  def destroy
+    post = Post.find(params[:id])
+    respond_to do |f|
+      f.html do
+        if post.destroy
+          flash[:success] = 'Post deleted successfully'
+          redirect_to user_posts_path(params[:user_id])
+        else
+          flash.now[:error] = 'Error: Post could not be deleted'
+          render :show, status: :unprocessable_entity, locals: { post: }
         end
       end
     end
