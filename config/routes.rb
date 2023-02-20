@@ -5,9 +5,10 @@ Rails.application.routes.draw do
     passwords: 'users/passwords'
   }
   root 'users#index'
-  post 'comments/new', to: 'comments#create', as: 'create_comment'
-  post 'likes/new', to: 'likes#create', as: 'create_like'
   resources :users, only: %i[index show] do
-    resources :posts, only: %i[index show new create]
+    resources :posts, only: %i[index show new create] do
+      resources :comments, only: :create
+      resources :likes, only: :create
+    end
   end
 end
