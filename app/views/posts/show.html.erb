@@ -8,6 +8,10 @@
     </div>  
   </div>
     <p><%= @post.text %></p>
+    <% if can? :destroy, @post  %>
+          <%= button_to "Delete Post", { action: "destroy", id: @post.id },
+                                method: :delete, class: 'del-btn btn' %>
+        <% end  %>
     <%= render 'shared/like_button' %>
   </div>
   <div class="all-comments">

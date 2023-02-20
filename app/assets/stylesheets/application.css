@@ -191,7 +191,8 @@
   overflow: hidden;
 }
 
-.post-detail form input {
+.post-detail form input,
+.post-detail form button {
   margin-left: auto;
 }
 
