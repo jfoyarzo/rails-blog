@@ -1,9 +1,6 @@
-  <% if flash[:error] %>
-    <p class="error"><%= flash[:error] %></p>
-  <% end %>
 <div class="new-post">
   <h2>Create a new Post</h2>
-  <%= form_with model: post, url: user_posts_path(current_user.id), method: post, scope: post do |form| %>
+  <%= form_with model: post, url: user_posts_path(current_user.id, post_id), method: post, scope: post do |form| %>
     <div class="form-group">
       <%= form.label :title %>
       <%= form.text_field :title %>

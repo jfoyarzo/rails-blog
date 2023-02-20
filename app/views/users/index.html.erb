@@ -3,8 +3,5 @@
 <h1>Welcome to Rails Blog!</h1>
 <a href=<%= new_user_post_path(current_user.id) %>><button type="button" class="btn">Create a new Post</button></a>
 </div>
-<% if flash[:notice] %>
-            <p class="notice"><%= flash[:notice] %></p>
-        <% end %>
   <%= render partial: 'shared/user', collection: @users %>
 </div>
